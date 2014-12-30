@@ -22,6 +22,7 @@
 		111F1BF81A52F241008BE66E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD71A52F241008BE66E /* UIKit.framework */; };
 		111F1C001A52F241008BE66E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 111F1BFE1A52F241008BE66E /* InfoPlist.strings */; };
 		111F1C021A52F241008BE66E /* Race_to_the_TopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 111F1C011A52F241008BE66E /* Race_to_the_TopTests.m */; };
+		111F1C0D1A52F271008BE66E /* XZZSpaceShipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 111F1C0C1A52F271008BE66E /* XZZSpaceShipView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		111F1BFD1A52F241008BE66E /* Race to the TopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Race to the TopTests-Info.plist"; sourceTree = "<group>"; };
 		111F1BFF1A52F241008BE66E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		111F1C011A52F241008BE66E /* Race_to_the_TopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Race_to_the_TopTests.m; sourceTree = "<group>"; };
+		111F1C0B1A52F271008BE66E /* XZZSpaceShipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZSpaceShipView.h; sourceTree = "<group>"; };
+		111F1C0C1A52F271008BE66E /* XZZSpaceShipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZSpaceShipView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				111F1BE31A52F241008BE66E /* XZZAppDelegate.m */,
 				111F1BE51A52F241008BE66E /* Main_iPhone.storyboard */,
 				111F1BE81A52F241008BE66E /* Main_iPad.storyboard */,
+				111F1C0B1A52F271008BE66E /* XZZSpaceShipView.h */,
+				111F1C0C1A52F271008BE66E /* XZZSpaceShipView.m */,
 				111F1BEB1A52F241008BE66E /* XZZViewController.h */,
 				111F1BEC1A52F241008BE66E /* XZZViewController.m */,
 				111F1BEE1A52F241008BE66E /* Images.xcassets */,
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111F1C0D1A52F271008BE66E /* XZZSpaceShipView.m in Sources */,
 				111F1BE01A52F241008BE66E /* main.m in Sources */,
 				111F1BE41A52F241008BE66E /* XZZAppDelegate.m in Sources */,
 				111F1BED1A52F241008BE66E /* XZZViewController.m in Sources */,
