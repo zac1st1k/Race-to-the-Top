@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1104BEB71A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1104BEB61A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg */; };
+		1104BEBA1A553D690097F537 /* XZZMountPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104BEB91A553D690097F537 /* XZZMountPath.m */; };
 		111F1BD41A52F241008BE66E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD31A52F241008BE66E /* Foundation.framework */; };
 		111F1BD61A52F241008BE66E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD51A52F241008BE66E /* CoreGraphics.framework */; };
 		111F1BD81A52F241008BE66E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD71A52F241008BE66E /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		1104BEB61A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mount_Fuji_and_Mount_Hoei.jpg; sourceTree = "<group>"; };
+		1104BEB81A553D690097F537 /* XZZMountPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZMountPath.h; sourceTree = "<group>"; };
+		1104BEB91A553D690097F537 /* XZZMountPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZMountPath.m; sourceTree = "<group>"; };
 		111F1BD01A52F241008BE66E /* Race to the Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Race to the Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		111F1BD31A52F241008BE66E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		111F1BD51A52F241008BE66E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				111F1BE31A52F241008BE66E /* XZZAppDelegate.m */,
 				111F1BE51A52F241008BE66E /* Main_iPhone.storyboard */,
 				111F1BE81A52F241008BE66E /* Main_iPad.storyboard */,
+				1104BEB81A553D690097F537 /* XZZMountPath.h */,
+				1104BEB91A553D690097F537 /* XZZMountPath.m */,
 				111F1C0B1A52F271008BE66E /* XZZSpaceShipView.h */,
 				111F1C0C1A52F271008BE66E /* XZZSpaceShipView.m */,
 				111F1BEB1A52F241008BE66E /* XZZViewController.h */,
@@ -265,6 +270,7 @@
 			files = (
 				111F1C0D1A52F271008BE66E /* XZZSpaceShipView.m in Sources */,
 				111F1BE01A52F241008BE66E /* main.m in Sources */,
+				1104BEBA1A553D690097F537 /* XZZMountPath.m in Sources */,
 				111F1BE41A52F241008BE66E /* XZZAppDelegate.m in Sources */,
 				111F1BED1A52F241008BE66E /* XZZViewController.m in Sources */,
 			);
