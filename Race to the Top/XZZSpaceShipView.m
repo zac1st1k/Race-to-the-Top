@@ -33,6 +33,12 @@
     [bezierPath addLineToPoint:CGPointMake(1/3.0 *self.bounds.size.width, 1/2.0 * self.bounds.size.height)];
     [bezierPath closePath];
     [bezierPath stroke];
+    
+    UIBezierPath *cockpitWindowPath = [UIBezierPath bezierPathWithRect:CGRectMake(2/3.0 * self.bounds.size.width, 1/2.0 * self.bounds.size.height, 1/6.0 * self.bounds.size.width, 1/12.0 * self.bounds.size.height)];
+    [[UIColor blueColor] setFill];
+    [cockpitWindowPath fill];
+//    [cockpitWindowPath closePath];
+    [cockpitWindowPath stroke];
 }
 
 @end
