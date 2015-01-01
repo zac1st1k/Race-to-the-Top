@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1104BEB71A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1104BEB61A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg */; };
 		111F1BD41A52F241008BE66E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD31A52F241008BE66E /* Foundation.framework */; };
 		111F1BD61A52F241008BE66E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD51A52F241008BE66E /* CoreGraphics.framework */; };
 		111F1BD81A52F241008BE66E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111F1BD71A52F241008BE66E /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1104BEB61A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mount_Fuji_and_Mount_Hoei.jpg; sourceTree = "<group>"; };
 		111F1BD01A52F241008BE66E /* Race to the Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Race to the Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		111F1BD31A52F241008BE66E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		111F1BD51A52F241008BE66E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +136,7 @@
 		111F1BDA1A52F241008BE66E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1104BEB61A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg */,
 				111F1BDB1A52F241008BE66E /* Race to the Top-Info.plist */,
 				111F1BDC1A52F241008BE66E /* InfoPlist.strings */,
 				111F1BDF1A52F241008BE66E /* main.m */,
@@ -239,6 +242,7 @@
 			files = (
 				111F1BEA1A52F241008BE66E /* Main_iPad.storyboard in Resources */,
 				111F1BEF1A52F241008BE66E /* Images.xcassets in Resources */,
+				1104BEB71A553BDF0097F537 /* Mount_Fuji_and_Mount_Hoei.jpg in Resources */,
 				111F1BE71A52F241008BE66E /* Main_iPhone.storyboard in Resources */,
 				111F1BDE1A52F241008BE66E /* InfoPlist.strings in Resources */,
 			);
@@ -401,6 +405,7 @@
 				GCC_PREFIX_HEADER = "Race to the Top/Race to the Top-Prefix.pch";
 				INFOPLIST_FILE = "Race to the Top/Race to the Top-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -414,6 +419,7 @@
 				GCC_PREFIX_HEADER = "Race to the Top/Race to the Top-Prefix.pch";
 				INFOPLIST_FILE = "Race to the Top/Race to the Top-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -477,6 +483,7 @@
 				111F1C071A52F241008BE66E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		111F1C081A52F241008BE66E /* Build configuration list for PBXNativeTarget "Race to the TopTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +492,7 @@
 				111F1C0A1A52F241008BE66E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
