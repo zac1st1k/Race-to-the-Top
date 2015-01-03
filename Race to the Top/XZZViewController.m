@@ -7,8 +7,10 @@
 //
 
 #import "XZZViewController.h"
+#import "XZZPathView.h"
 
 @interface XZZViewController ()
+@property (strong, nonatomic) IBOutlet XZZPathView *pathView;
 
 @end
 
@@ -18,6 +20,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
+    tapRecognizer.numberOfTapsRequired = 2;
+    [self.pathView addGestureRecognizer:tapRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +31,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tapDetected:(UITapGestureRecognizer *)tapRecognizer
+{
+    NSLog(@"Tapped!");
+}
 @end

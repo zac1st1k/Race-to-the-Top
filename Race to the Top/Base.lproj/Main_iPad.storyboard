@@ -30,6 +30,9 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="pathView" destination="6GW-y4-528" id="tPu-6G-khP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGr-Tz-Lk2" sceneMemberID="firstResponder"/>
             </objects>
