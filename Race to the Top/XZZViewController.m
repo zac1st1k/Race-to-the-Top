@@ -70,7 +70,8 @@
             UIBezierPath *tapTarget = [XZZMountPath tapTargetForPath:path];
             if ([tapTarget containsPoint:fingerLocation]) {
                 NSLog(@"You hit the wall");
-                [self decrementScoreByAmount:XZZMAP_SCORE_DECREMENT_AMOUNT];
+//                  [self decrementScoreByAmount:XZZMAP_SCORE_DECREMENT_AMOUNT];
+                [self gameOver];
             }
         }
     }
@@ -98,6 +99,14 @@
     NSString *scoreText = [[self.scoreLabel.text componentsSeparatedByString:@" "] lastObject];
     int score = [scoreText intValue];
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", score - amount];
+}
+
+- (void)gameOver
+{
+    UIAlertView *gameOverAlert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"You hit the wall and die" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [gameOverAlert show];
+    [self.timer invalidate];
+//    self.scoreLabel.text = @"Game Over";
 }
 
 @end
