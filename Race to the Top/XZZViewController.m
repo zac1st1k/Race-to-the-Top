@@ -60,20 +60,37 @@
 {
     CGPoint fingerLocation = [panRecognizer locationInView:self.pathView];
     NSLog(@"I'm at (%f, %f", fingerLocation.x, fingerLocation.y);
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", XZZMAP_STARTING_SCORE];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:XZZTIMER_INTERVAL target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
-    for (UIBezierPath *path in [XZZMountPath mountainPathsForRect:self.pathView.bounds]) {
-        UIBezierPath *tapTarget = [XZZMountPath tapTargetForPath:path];
-        if ([tapTarget containsPoint:fingerLocation]) {
-            NSLog(@"You hit the wall");
+
+    if (panRecognizer.state == UIGestureRecognizerStateBegan && fingerLocation.y > 700) {
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", XZZMAP_STARTING_SCORE];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:XZZTIMER_INTERVAL target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+    }
+    else if (panRecognizer.state == UIGestureRecognizerStateChanged){
+        for (UIBezierPath *path in [XZZMountPath mountainPathsForRect:self.pathView.bounds]) {
+            UIBezierPath *tapTarget = [XZZMountPath tapTargetForPath:path];
+            if ([tapTarget containsPoint:fingerLocation]) {
+                NSLog(@"You hit the wall");
+                [self decrementScoreByAmount:XZZMAP_SCORE_DECREMENT_AMOUNT];
+            }
         }
+    }
+    else if (panRecognizer.state == UIGestureRecognizerStateEnded && fingerLocation.y <= 165){
+        [self.timer invalidate];
+        self.timer = nil;
+        UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:@"Congratulation!" message:self.scoreLabel.text  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.timer invalidate];
+        [winAlert show];
+    }
+    else{
+        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Reminder" message:@"Please start from the buttom!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.timer invalidate];
+        [warningAlert show];
     }
 }
 
 - (void)timerFired
 {
     [self decrementScoreByAmount:XZZMAP_SCORE_DECREMENT_AMOUNT];
-    NSLog(@"time!");
 }
 
 - (void)decrementScoreByAmount:(int)amount
