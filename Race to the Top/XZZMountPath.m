@@ -127,4 +127,12 @@
     
 }
 
++ (UIBezierPath *)tapTargetForPath:(UIBezierPath *)path;
+{
+    CGPathRef tapTargetPath = CGPathCreateCopyByStrokingPath(path.CGPath, NULL, fmaxf(10.0f, path.lineWidth), path.lineCapStyle, path.lineJoinStyle, path.miterLimit);
+    UIBezierPath *tapTarget = [UIBezierPath bezierPathWithCGPath:tapTargetPath];
+    CGPathRelease(tapTargetPath);
+    return tapTarget;
+}
+
 @end

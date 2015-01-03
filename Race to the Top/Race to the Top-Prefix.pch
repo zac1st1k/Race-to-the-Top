@@ -11,6 +11,9 @@
 #endif
 
 #define PATH_WIDTH  60
+#define XZZMAP_STARTING_SCORE 15000
+#define XZZMAP_SCORE_DECREMENT_AMOUNT 100
+#define XZZTIMER_INTERVAL 0.1
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
