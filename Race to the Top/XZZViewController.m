@@ -30,6 +30,16 @@
     
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
     [self.pathView addGestureRecognizer:panRecognizer];
+
+    self.scoreLabel = [[UILabel alloc] init];
+    self.scoreLabel.frame = CGRectMake(20, 50, 280, 30);
+    self.scoreLabel.textColor = [UIColor whiteColor];
+    //    scoreLabel.backgroundColor = [UIColor greenColor];
+    //    scoreLabel.font = [UIFont systemFontOfSize:25.0];
+    self.scoreLabel.font = [UIFont boldSystemFontOfSize:25.0];
+    self.scoreLabel.text = @"scoreLabel";
+    [self.view addSubview:self.scoreLabel];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", XZZMAP_STARTING_SCORE];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +60,7 @@
 {
     CGPoint fingerLocation = [panRecognizer locationInView:self.pathView];
     NSLog(@"I'm at (%f, %f", fingerLocation.x, fingerLocation.y);
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", XZZMAP_STARTING_SCORE];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:XZZTIMER_INTERVAL target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
     for (UIBezierPath *path in [XZZMountPath mountainPathsForRect:self.pathView.bounds]) {
         UIBezierPath *tapTarget = [XZZMountPath tapTargetForPath:path];
@@ -61,7 +72,15 @@
 
 - (void)timerFired
 {
-    NSLog(@"Timer");
+    [self decrementScoreByAmount:XZZMAP_SCORE_DECREMENT_AMOUNT];
+    NSLog(@"time!");
+}
+
+- (void)decrementScoreByAmount:(int)amount
+{
+    NSString *scoreText = [[self.scoreLabel.text componentsSeparatedByString:@" "] lastObject];
+    int score = [scoreText intValue];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", score - amount];
 }
 
 @end
