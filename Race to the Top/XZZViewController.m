@@ -23,6 +23,9 @@
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
     tapRecognizer.numberOfTapsRequired = 2;
     [self.pathView addGestureRecognizer:tapRecognizer];
+    
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
+    [self.pathView addGestureRecognizer:panRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +37,15 @@
 - (void)tapDetected:(UITapGestureRecognizer *)tapRecognizer
 {
     NSLog(@"Tapped!");
+    CGPoint tapLocation = [tapRecognizer locationInView:self.pathView];
+//    CGPoint tapLocation = [tapRecognizer locationOfTouch:0 inView:self.pathView];
+    NSLog(@"Tap location is at (%f, %f)", tapLocation.x, tapLocation.y);
 }
+
+- (void)panDetected:(UIPanGestureRecognizer *)panRecognizer
+{
+    CGPoint fingerLocation = [panRecognizer locationInView:self.pathView];
+    NSLog(@"I'm at (%f, %f", fingerLocation.x, fingerLocation.y);
+}
+
 @end
